@@ -1,0 +1,12 @@
+{
+  "name": "brilliant-test-script",
+  "version": "1.0.0",
+  "description": "Configures an invitation with a token and then visits the link. Checks email to ensure both notifications have been recieved.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "puppeteer": "^24.15.0"
+  }
+}
