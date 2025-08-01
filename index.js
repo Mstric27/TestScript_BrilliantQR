@@ -63,7 +63,7 @@ async function redirectTest(page, redirectURLToTry) {
 
   const configURLToTry = `https://brilliantqr.com/configure/${chosenOption}/0`;
   const redirectURLToTry = `https://brilliantqr.com/redirect/${chosenOption}/0`;
-  const tokenToUse = crypto.randomUUID();
+  const tokenToUse = process.argv[2];
 
   const page = await browser.newPage();
 

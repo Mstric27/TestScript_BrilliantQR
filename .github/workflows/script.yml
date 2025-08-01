@@ -2,6 +2,10 @@ name: Run Test Script
 
 on:
   workflow_dispatch: # Allows manual or API trigger
+    inputs:
+      tokenValue:
+        description: "Token to use in script"
+        required: true
 
 jobs:
   run-puppeteer:
@@ -19,4 +23,4 @@ jobs:
         run: npm install
 
       - name: Run Test script
-        run: node index.js
+        run: node index.js "${{ github.event.inputs.tokenValue }}"
